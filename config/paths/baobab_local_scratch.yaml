@@ -1,0 +1,2 @@
+data_dir: /var/tmp
+output_dir: ${oc.env:HOME}/scratch/logs/compress-llm/
