@@ -844,9 +844,6 @@ def apply_compression_parallel(config: Dict, model: torch.nn.Module, modules_to_
                 model_adapter.finetune_layer(layer_adapter, args, kwargs, inps_hat,
                                             device='cuda', layer_idx=idx, num_steps=25, lr=1e-4, loss_type='mse')
 
-                # model_adapter.finetune_layer_with_allocation(layer_adapter, args, kwargs, inps_hat,
-                #                             device='cuda', layer_idx=idx, num_steps=50, lr=1e-3, loss_type='mse', target_ratio=0.8)
-
                 # save each module after fine-tuning
                 if save_path is not None:
                     for module_name, module in layer_adapter.layer.named_modules():
